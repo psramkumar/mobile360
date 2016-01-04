@@ -1,0 +1,21 @@
+<ion-view title="Equinix Login">
+    <ion-nav-buttons side="right">
+      <button ng-click="logger.login()" ng-disabled="!logger.phone || logger.phone.length === 0" class="button button-clear button-positive">Login</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="eq-m-logins">
+          <div class="text-center instructions">Please use your Equinix Email Id and Password</div>
+          <div className="eq-m-logo"></div>
+          <div className="eq-m-login-form container">
+              <div class="list">
+                  <label class="item item-input">
+                      <input id="login-email" ng-model="logger.email" on-return="logger.login()" type="text" placeholder="Email Id">
+                  </label>
+                  <label class="item item-input">
+                      <input id="login-password" ng-model="logger.password" on-return="logger.login()" type="text" placeholder="Password">
+                  </label>
+              </div>
+          </div>
+        </div>
+    </ion-content>
+</ion-view>
